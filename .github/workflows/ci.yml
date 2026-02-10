@@ -1,0 +1,29 @@
+name: simple pipeline
+env:
+  shri: veera
+on:
+  push:
+     branches: [ 'main' ]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: this is the first job
+      run: echo "this is the first job ${shri}s "
+
+
+
+# pipeline {
+#     agent any 
+#     environment {
+#         MYNAME = "VEERA-VISHWA"
+#         GREETING = "HELLOW WELCOME TO THE WORLD OF PIPELINE SYNTAX"
+#     }
+#     stages {
+#         stage ("this is the first stage") {
+#             steps {
+#                 echo "${MYNAME}, ${GREETING}, THANKYOU "
+#             }
+#         }
+#     }
+# }
